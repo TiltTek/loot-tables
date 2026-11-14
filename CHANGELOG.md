@@ -4,6 +4,15 @@ All notable changes to `tilttek/loot-tables` will be documented in this file.
 
 Updates should follow the [Keep a CHANGELOG](https://keepachangelog.com/) principles.
 
+## 0.2.0-alpha - 2026-11-14
+
+### Changed
+
+- `tilttek/dice` 0.2 accepted as well as 0.1.
+- `LootDrawer::verify()` checks the client seed of a proof as `reveal()` does — 1 to 256 bytes of UTF-8 text — before
+  rolling the dice again: a proof with an empty client seed, which no reveal gives, or with one that is too long or not
+  UTF-8 text, is false, and a long one sent in a public request no longer costs a roll of its length.
+
 ## 0.1.0-alpha - 2026-11-11
 
 ### Added
